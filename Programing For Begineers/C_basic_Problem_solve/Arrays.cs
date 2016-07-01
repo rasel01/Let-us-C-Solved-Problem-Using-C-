@@ -672,5 +672,46 @@ namespace C_basic_Problem_solve
 
             return area;
         }
+
+
+        public void FindDistanceOfTenCordinate()
+        {
+            Console.WriteLine("enter how many point you have?");
+            int input = Convert.ToInt32(Console.ReadLine());
+            int[] XCorDinate = new int[input];
+            int[] YCorDinate = new int[input];
+            Console.WriteLine("Enter for  X cordinate");
+            for (int i = 0; i < input.ToString().Length; i++)
+            {
+                XCorDinate[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Enter for  Y cordinate");
+            for (int j = 0; j < input.ToString().Length; j++)
+            {
+                YCorDinate[j] = Convert.ToInt32(Console.ReadLine());
+            }
+            int distance = CalDistance(XCorDinate,YCorDinate,input);
+            Console.WriteLine("Distance berween number is :" + distance);
+
+        }
+
+        private int CalDistance(int[] XCorDinate, int[] YCorDinate, int input)
+        {
+           double x, y, sum = 0.0, dis = 0.0;
+
+            for (int i = 0; i < (input.ToString().Length)-1; i++)
+            {
+                x = (int) Math.Pow((XCorDinate[i + 1] - XCorDinate[i]),2.0);
+
+                 y = (int) Math.Pow((YCorDinate[i + 1] - YCorDinate[i]),2.0);
+
+                //x = Math.Pow(x1, 2.0);
+                //y = Math.Pow(y1, 2.0);
+                dis = Math.Sqrt(x + y);
+                sum = sum + dis;
+            }
+            return Convert.ToInt32(sum);
+        }
     }
 }

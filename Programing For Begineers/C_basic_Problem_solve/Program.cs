@@ -106,7 +106,88 @@ namespace C_basic_Problem_solve
             // array.SymanticsMatrix();
             // array.SumOfMatrix();
             //array.MeanDeviation();
-            array.AreaTriangle();
+            //array.AreaTriangle();
+
+            //array.FindDistanceOfTenCordinate();
+
+
+            PuppetingOnString pos = new PuppetingOnString();
+            //pos.ExtractedString();
+           // pos.StringSwap();
+           // pos.ArrayStringSort();
+           // pos.ArrayStringReverse();
+            //pos.removeVowel();
+            //pos.optinalParameter();
+
+           //------------------------- structure------------------------//
+
+            //Console.WriteLine("enter the number of  students information  you need to store ?");
+            //int input = Convert.ToInt32(Console.ReadLine());
+            //Student[] std = new Student[input];
+            //if (input <= 450)
+            //{
+            //    Student st = new Student();
+            //    std = st.TakeInput(std);
+            //    if (std != null)
+            //    {
+            //        Console.WriteLine(" Student info are:");
+            //        st.GivenOutput(std);
+            //    } 
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sorry student info is fill up");
+            //}
+
+
+
+            //Console.WriteLine("enter the number of  Customer information  you need to store ?");
+            //int input = Convert.ToInt32(Console.ReadLine());
+            //Customer[] cus = new Customer[input];
+            //if (input <= 200)
+            //{
+            //    Customer customer = new Customer();
+            //    cus = customer.TakeInput(cus);
+            //    if (cus != null)
+            //    {
+            //        Console.WriteLine(" Customer info are:");
+            //        customer.PrintCustomerInfo(cus);
+            //        Console.WriteLine("Any request, then press y for yes or n for no");
+            //        string user = Console.ReadLine();
+            //        if (user == "yes" || user == "no"|| user == "y" || user == "n" )
+            //        {
+            //            if (user == "no" || user == "n")
+            //            {
+            //                Console.WriteLine("ok, goodbye");
+            //            }
+            //            else
+            //            {
+            //                customer.UserTractionRequest(customer, cus);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("invalid response from user");
+            //        }
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Sorry customer number is fill up");
+            //}
+
+
+
+            Console.WriteLine("How many you have?");
+            int input = Convert.ToInt32(Console.ReadLine());
+            Employee[] emp = new Employee[input];
+            Employee employee= new Employee();
+            emp = employee.TakeInput(emp);
+            Console.WriteLine("Enter current date");
+            DateTime info = Convert.ToDateTime(Convert.ToDateTime(Console.ReadLine()).ToString("yy-mm-dd"));
+            employee.EmployeeOutput(emp, info);
+            
+
 
 
 
@@ -114,5 +195,7 @@ namespace C_basic_Problem_solve
             Console.ReadKey();
 
         }
+
+       
     }
 }
